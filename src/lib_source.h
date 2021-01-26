@@ -2,11 +2,11 @@
 
 namespace MyLib
 {
-class MyClass
+class LibSource
 {
 public:
-  explicit MyClass(const int t_value);
-  ~MyClass() = default;
+  explicit LibSource(const int t_value);
+  ~LibSource() = default;
   int getValue() const;
 private:
   int m_Value;

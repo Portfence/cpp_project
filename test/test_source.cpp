@@ -1,7 +1,7 @@
 #include "mylib/my_class.h"
 
-#include <catch2/catch.hpp>
-#include <catch2/trompeloeil.hpp>
+#include <doctest/doctest.h>
+#include <doctest/trompeloeil.hpp>
 
 TEST_CASE("AddOneAndTwo")
 {
