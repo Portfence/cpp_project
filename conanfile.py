@@ -2,7 +2,7 @@ from conans import ConanFile, CMake, tools
 
 
 class CXXProjectConan(ConanFile):
-    name = "CXXProjectConan"
+    name = "cpp_project"
     version = "1.0.0"
     license = "MIT License"
     author = "Albert Havnegjerde alberthavnegjerde@gmail.com"
