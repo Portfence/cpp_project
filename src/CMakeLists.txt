@@ -29,3 +29,25 @@ target_include_directories(${PROJECT_NAME}
 )
 
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
+
+install(TARGETS ${PROJECT_NAME} 
+        EXPORT ${PROJECT_NAME}-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin)
+
+install(EXPORT ${PROJECT_NAME}-export
+        DESTINATION lib/cmake/${PROJECT_NAME}
+        FILE ${PROJECT_NAME}-targets.cmake
+        NAMESPACE ${PROJECT_NAME}::)
+
+install(DIRECTORY include/${PROJECT_NAME}
+        DESTINATION include)
+
+include(CMakePackageConfigHelpers)
+
+write_basic_package_version_file(${PROJECT_NAME}-config-version.cmake
+        COMPATIBILITY SameMajorVersion VERSION 3.16.3)
+
+install(FILES cmake/${PROJECT_NAME}-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake
+        DESTINATION lib/cmake/${PROJECT_NAME})
