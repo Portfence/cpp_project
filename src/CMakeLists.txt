@@ -32,9 +32,9 @@ add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 install(TARGETS ${PROJECT_NAME} 
         EXPORT ${PROJECT_NAME}-export
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
-        RUNTIME DESTINATION bin)
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 install(EXPORT ${PROJECT_NAME}-export
         DESTINATION lib/cmake/${PROJECT_NAME}
@@ -47,7 +47,7 @@ install(DIRECTORY include/${PROJECT_NAME}
 include(CMakePackageConfigHelpers)
 
 write_basic_package_version_file(${PROJECT_NAME}-config-version.cmake
-        COMPATIBILITY SameMajorVersion VERSION 3.16.3)
+        COMPATIBILITY SameMajorVersion VERSION SameMajorVersion)
 
 install(FILES cmake/${PROJECT_NAME}-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake
         DESTINATION lib/cmake/${PROJECT_NAME})
