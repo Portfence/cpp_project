@@ -3,8 +3,15 @@
 #include <doctest/doctest.h>
 #include <doctest/trompeloeil.hpp>
 
-TEST_CASE("AddOneAndTwo")
+TEST_CASE("GetValue")
 {
+  // ARRANGE
+  const int expected = 2;
+  CppProject::LibSourceA a(expected);
 
-  REQUIRE(true);
+  // ACT
+  const int result = a.getValue();
+
+  // ASSERT
+  REQUIRE(result == expected);
 }
