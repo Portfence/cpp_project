@@ -6,7 +6,7 @@ class CXXProjectConan(ConanFile):
     version = "1.0.0"
     license = "MIT License"
     author = "Albert Havnegjerde alberthavnegjerde@gmail.com"
-    url = "git@github.com:Portfence/transparent_cmake_conan_project_template.git"
+    url = "https://github.com/Portfence/cpp_project.git"
     description = "Example of a CXX Project using cmake_find_package_multi generator"
     settings = "os", "compiler", "build_type", "arch"
     requires = "doctest/2.3.4@bincrafters/stable", \

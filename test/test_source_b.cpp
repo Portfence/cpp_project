@@ -1,10 +1,7 @@
-#include "mylib/my_class.h"
-
 #include <doctest/doctest.h>
 #include <doctest/trompeloeil.hpp>
 
-TEST_CASE("AddOneAndTwo")
+TEST_CASE("MultiplyTwoWithThree")
 {
-
   REQUIRE(true);
 }
