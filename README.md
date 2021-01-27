@@ -1,5 +1,5 @@
 # Modern C++ Project Template
-C++ Project built with CMake and Conan Package Manager
+C++ Project template that is built with CMake and Conan Package Manager. This project is a "work in progress".
 
 ## Build Status
 [![Build Status](https://travis-ci.com/Portfence/cpp_project.svg?branch=main)](https://travis-ci.com/Portfence/cpp_project)
