@@ -1,4 +1,4 @@
-# cpp_project
+# Modern C++ Project Template
 C++ Project built with CMake and Conan Package Manager
 
 ## Build Status
