@@ -21,7 +21,7 @@ target_compile_features(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE fmt::fmt
-    PRIVATE plog::plog
+    PUBLIC plog::plog
 )
 
 # Contributers use #include "lib_source_XXX.h"
