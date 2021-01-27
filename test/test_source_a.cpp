@@ -3,6 +3,10 @@
 #include <doctest/doctest.h>
 #include <doctest/trompeloeil.hpp>
 
+
+/**
+ * @test getValue return the value contained in class under test 
+ */
 TEST_CASE("GetValue")
 {
   // ARRANGE

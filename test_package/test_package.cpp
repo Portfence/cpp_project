@@ -1,7 +1,7 @@
-#include <iostream>
-
 #include <cpp_project/lib_source_a.h>
 #include <cpp_project/lib_source_b.h>
+
+#include <iostream>
 
 int main()
 {
