@@ -1,0 +1,21 @@
+os: linux
+language: python
+python: "3.8"
+dist: focal
+compiler:
+  - gcc
+install:
+# Install conan
+  - pip install conan
+# Automatic detection of your arch, compiler, etc.
+  - conan user
+script:
+# Download dependencies and build project
+  - conan install . -if build
+# Call your build system
+  - cmake . -Bbuild -G "Unix Makefiles"
+  - cmake --build build
+# Run your tests
+  - cd build
+  - ctest .
+  - cd ..
