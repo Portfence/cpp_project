@@ -13,5 +13,5 @@ script:
   - cmake . -Bbuild -DCMAKE_BUILD_TYPE=Release
   - cmake --build build
   - cd build
-  - ctest .
+  - ctest -VV
   - cd ..
