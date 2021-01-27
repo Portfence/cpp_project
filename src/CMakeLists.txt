@@ -7,6 +7,9 @@ project(cpp_project CXX)
 set(CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR} ${CMAKE_MODULE_PATH})
 set(CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR} ${CMAKE_PREFIX_PATH})
 
+find_package(fmt CONFIG REQUIRED)
+find_package(plog CONFIG REQUIRED)
+
 add_library(${PROJECT_NAME} SHARED
     lib_source_a.cpp
     lib_source_b.cpp
@@ -14,6 +17,11 @@ add_library(${PROJECT_NAME} SHARED
 
 target_compile_features(${PROJECT_NAME}
     PUBLIC cxx_std_20
+)
+
+target_link_libraries(${PROJECT_NAME}
+    PRIVATE fmt::fmt
+    PRIVATE plog::plog
 )
 
 # Contributers use #include "lib_source_XXX.h"

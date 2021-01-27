@@ -10,7 +10,9 @@ class CXXProjectConan(ConanFile):
     description = "Example of a CXX Project using cmake_find_package_multi generator"
     settings = "os", "compiler", "build_type", "arch"
     requires = "doctest/2.3.4@bincrafters/stable", \
-               "trompeloeil/v38@rollbear/stable"
+               "trompeloeil/v38@rollbear/stable", \
+               "fmt/6.0.0", \
+               "plog/1.1.5"
     generators = "cmake_find_package_multi"
     scm = {
         "type": "git",
