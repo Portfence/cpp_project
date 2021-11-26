@@ -9,9 +9,9 @@ class CXXProjectConan(ConanFile):
     url = "https://github.com/Portfence/cpp_project.git"
     description = "Example of a CXX Project using cmake_find_package_multi generator"
     settings = "os", "compiler", "build_type", "arch"
-    requires = "doctest/2.3.4@bincrafters/stable", \
-               "trompeloeil/v38@rollbear/stable", \
-               "fmt/6.0.0", \
+    requires = "doctest/2.4.6@bincrafters/stable", \
+               "trompeloeil/41@rollbear/stable", \
+               "fmt/8.0.1", \
                "plog/1.1.5"
     generators = "cmake_find_package_multi"
     scm = {
